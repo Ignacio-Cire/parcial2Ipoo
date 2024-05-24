@@ -1,10 +1,10 @@
 <?php
-include_once("Categoria.php");
-include_once("Torneo.php");
-include_once("Equipo.php");
-include_once("Partido.php");
-include_once("Futbol.php");
-include_once("Basquet.php");
+include_once "Categoria.php";
+include_once "Torneo.php";
+include_once "Equipo.php";
+include_once "Partido.php";
+include_once "PartidoFutbol.php" ;
+include_once "PartidoBasquet.php";
 
 // Crear categorías
 $catMayores = new Categoria(1, 'Mayores');
