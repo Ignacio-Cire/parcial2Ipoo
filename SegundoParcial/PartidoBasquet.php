@@ -10,6 +10,7 @@ class PartidoBasquet extends Partido {
     public function __construct($idpartido, $fecha, $objEquipo1, $cantGolesE1, $objEquipo2, $cantGolesE2, $cuartos, $CantInfracciones) {
         parent::__construct($idpartido, $fecha, $objEquipo1, $cantGolesE1, $objEquipo2, $cantGolesE2);
         $this->cuartos = $cuartos;
+        $this->CantInfracciones = $CantInfracciones;
     }
 
     public function getCuartos() {
