@@ -4,7 +4,7 @@ include_once "Torneo.php";
 include_once "Equipo.php";
 include_once "Partido.php";
 include_once "PartidoFutbol.php" ;
-include_once "PartidoBasquet.php";
+include_once "PartidoPartidoBasquet.php";
 
 // Crear categorías
 $catMayores = new Categoria(1, 'Mayores');
@@ -17,22 +17,22 @@ $objE2 = new Equipo("Equipo Dos", "Cap.Dos", 2, $catMayores);
 // Crear más equipos según sea necesario...
 
 // Crear objetos partido de básquet
-$objP1 = new Basquet(11, '2024-05-05', $objE7, 80, $objE8, 120, 7);
-$objP2 = new Basquet(12, '2024-05-06', $objE9, 81, $objE10, 110, 8);
-$objP3 = new Basquet(13, '2024-05-07', $objE11, 115, $objE12, 85, 9);
+$objP1 = new PartidoBasquet(11, '2024-05-05', $objE7, 80, $objE8, 120, 7);
+$objP2 = new PartidoBasquet(12, '2024-05-06', $objE9, 81, $objE10, 110, 8);
+$objP3 = new PartidoBasquet(13, '2024-05-07', $objE11, 115, $objE12, 85, 9);
 
 // Crear objetos partido de fútbol
-$objP4 = new Futbol(14, '2024-05-07', $objE1, 3, $objE2, 2);
-$objP5 = new Futbol(15, '2024-05-08', $objE3, 0, $objE4, 1);
-$objP6 = new Futbol(16, '2024-05-09', $objE5, 2, $objE6, 3);
+$objP4 = new PartidoFutbol(14, '2024-05-07', $objE1, 3, $objE2, 2);
+$objP5 = new PartidoFutbol(15, '2024-05-08', $objE3, 0, $objE4, 1);
+$objP6 = new PartidoFutbol(16, '2024-05-09', $objE5, 2, $objE6, 3);
 
 // Crear objeto Torneo con un importe base del premio de 100.000
 $torneo = new Torneo(100000);
 
 // Ingresar los partidos al torneo
 $torneo->ingresarPartido($objE5, $objE11, '2024-05-23', 'Futbol');
-$torneo->ingresarPartido($objE11, $objE11, '2024-05-23', 'Basquetbol');
-$torneo->ingresarPartido($objE9, $objE10, '2024-05-25', 'Basquetbol');
+$torneo->ingresarPartido($objE11, $objE11, '2024-05-23', 'PartidoBasquetbol');
+$torneo->ingresarPartido($objE9, $objE10, '2024-05-25', 'PartidoBasquetbol');
 
 // Visualizar la respuesta y la cantidad de equipos del torneo para cada ingreso de partido
 echo "Resultado de ingresarPartido(1): " . $torneo->ingresarPartido($objE5, $objE11, '2024-05-23', 'Futbol') . "\n";
